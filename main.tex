@@ -54,7 +54,7 @@
     
     \begingroup
         \fontsize{14pt}{16pt}\selectfont
-        \textbf{BÁO CÁO TIỂU LUẬN KHÓA LUẬN} \\
+        \textbf{TIỂU LUẬN} \\
         \vspace{0.3cm}
         \textbf{MÔN HỌC: HỆ THỐNG GIAO THÔNG THÔNG MINH} \\
     \endgroup
@@ -75,7 +75,7 @@
         \begin{tabular}{ll}
             \textbf{Sinh viên thực hiện:} & Đỗ Hữu Khang \\
             \textbf{Lớp:} & KHOA HỌC MÁY TÍNH \\
-            \textbf{Mã số sinh viên:} & 2580101060 \\
+            \textbf{Mã số học viên:} & 2580101060 \\
             \textbf{Giảng viên hướng dẫn:} & Lê Văn Quốc Anh
         \end{tabular}
     \end{flushright}
@@ -131,11 +131,11 @@ Về mặt vật lý và tâm sinh lý học, khả năng phản xạ của con 
 \end{enumerate}
 Theo tiêu chuẩn thiết kế hình học đường cao tốc của Hiệp hội Quan chức Giao thông và Vận tải Bang Hoa Kỳ (AASHTO) và các nghiên cứu y sinh học, tổng thời gian PRT trung bình của người lái xe tỉnh táo dao động từ $1.2$ đến $1.5$ giây, và có thể lên tới $2.0 - 2.5$ giây khi tài xế mệt mỏi, phân tâm hoặc lái xe vào ban đêm.
 
-Trong suốt thời gian phản xạ $t_{\text{PRT}}$, chiếc xe vẫn tiếp tục lao đi với vận tốc ban đầu $v$ mà không hề có lực hãm phanh:
+\textbf{Khái niệm Thời gian trôi và Quãng đường trôi tự do:} Trong suốt khoảng thời gian não bộ tiếp nhận và xử lý phản xạ ($t_{\text{PRT}} = 1.2 - 1.5$ s), hệ thống phanh của phương tiện hoàn toàn chưa được kích hoạt vì bàn chân người lái vẫn chưa chạm vào bàn đạp phanh. Khoảng thời gian trễ do giới hạn phản xạ của con người này dẫn đến một \textit{"thời gian xe trôi tự do" (Free-rolling reaction time)}. Trong suốt thời gian này, chiếc xe tiếp tục lao về phía trước theo quán tính với vận tốc ban đầu $v$ không hề suy giảm, vượt qua một \textbf{quãng đường trôi tự do}:
 \begin{equation}
     d_{\text{PRT}} = v \cdot t_{\text{PRT}}
 \end{equation}
-Sau khi đạp phanh, xe cần thêm \textbf{Thời gian phanh dừng hoàn toàn} $t_{\text{br}} = v / a_{\text{max}}$ (với gia tốc hãm phanh cực đại $a_{\text{max}} \approx 6.5 - 7.5 \text{ m/s}^2$ trên mặt đường nhựa khô ráo) để triệt tiêu toàn bộ động năng, tạo ra quãng đường phanh $d_{\text{br}} = v^2 / (2 a_{\text{max}})$. Tổng khoảng cách dừng xe tối thiểu (Stopping Sight Distance - SSD) được xác định bởi:
+Chỉ sau khi kết thúc thời gian trôi (chân đã đạp lún phanh), hệ thống phanh mới bắt đầu phát huy tác dụng. Xe cần thêm \textbf{Thời gian phanh dừng hoàn toàn} $t_{\text{br}} = v / a_{\text{max}}$ (với gia tốc hãm phanh cực đại $a_{\text{max}} \approx 6.5 - 7.5 \text{ m/s}^2$ trên mặt đường nhựa khô ráo) để triệt tiêu toàn bộ động năng, tạo ra quãng đường phanh thuần túy $d_{\text{br}} = v^2 / (2 a_{\text{max}})$. Tổng khoảng cách dừng xe tối thiểu (Stopping Sight Distance - SSD) được xác định bởi:
 \begin{equation}
     d_{\text{stop}} = d_{\text{PRT}} + d_{\text{br}} = v \cdot t_{\text{PRT}} + \frac{v^2}{2 \mu g}
 \end{equation}
@@ -143,25 +143,31 @@ trong đó $\mu$ là hệ số ma sát lốp - mặt đường và $g \approx 9.
 
 \begin{table}[H]
     \centering
-    \small
-    \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.2cm}|>{\centering\arraybackslash}p{2.0cm}|>{\centering\arraybackslash}p{2.2cm}|>{\centering\arraybackslash}p{2.0cm}|>{\centering\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}X|}
+    \footnotesize
+    \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{1.9cm}|>{\centering\arraybackslash}p{1.8cm}|>{\centering\arraybackslash}p{1.7cm}|>{\centering\arraybackslash}p{1.8cm}|>{\centering\arraybackslash}p{1.7cm}|>{\centering\arraybackslash}p{1.7cm}|>{\centering\arraybackslash}X|}
         \hline
-        \textbf{Vận tốc di chuyển} & \textbf{Quãng đường trôi ($t_{\text{PRT}} = 1.5$s)} & \textbf{Thời gian phanh ($a = 7 \text{ m/s}^2$)} & \textbf{Quãng đường phanh} & \textbf{Tổng cự ly dừng xe} & \textbf{Thời gian tới va chạm (TTC khi cách 15m)} \\
+        \textbf{Vận tốc di chuyển} & \textbf{Quãng đường trôi ($t_{\text{PRT}} = 1.5$s)} & \textbf{Quãng đường phanh thuần} & \textbf{Tổng cự ly dừng an toàn} & \textbf{TTC khi cách $15\text{ m}$ (Bám sát)} & \textbf{TTC khi cách $50\text{ m}$ (Trung bình)} & \textbf{TTC khi cách $100\text{ m}$ (Chuẩn luật)} \\
         \hline
-        $60 \text{ km/h}$ ($16.7 \text{ m/s}$) & $25.0 \text{ m}$ & $2.38 \text{ s}$ & $19.9 \text{ m}$ & $44.9 \text{ m}$ & $0.90 \text{ s}$ \\
+        $60 \text{ km/h}$ ($16.7 \text{ m/s}$) & $25.0 \text{ m}$ & $19.9 \text{ m}$ & $44.9 \text{ m}$ & $0.90 \text{ s}$ & $3.00 \text{ s}$ & $6.00 \text{ s}$ \\
         \hline
-        $80 \text{ km/h}$ ($22.2 \text{ m/s}$) & $33.3 \text{ m}$ & $3.17 \text{ s}$ & $35.2 \text{ m}$ & $68.5 \text{ m}$ & $0.68 \text{ s}$ \\
+        $80 \text{ km/h}$ ($22.2 \text{ m/s}$) & $33.3 \text{ m}$ & $35.2 \text{ m}$ & $68.5 \text{ m}$ & $0.68 \text{ s}$ & $2.25 \text{ s}$ & $4.50 \text{ s}$ \\
         \hline
-        $100 \text{ km/h}$ ($27.8 \text{ m/s}$) & $41.7 \text{ m}$ & $3.97 \text{ s}$ & $55.2 \text{ m}$ & $96.9 \text{ m}$ & $0.54 \text{ s}$ \\
+        $100 \text{ km/h}$ ($27.8 \text{ m/s}$) & $41.7 \text{ m}$ & $55.2 \text{ m}$ & $96.9 \text{ m}$ & $0.54 \text{ s}$ & $1.80 \text{ s}$ & $3.60 \text{ s}$ \\
         \hline
-        $120 \text{ km/h}$ ($33.3 \text{ m/s}$) & $50.0 \text{ m}$ & $4.76 \text{ s}$ & $79.3 \text{ m}$ & $129.3 \text{ m}$ & $\mathbf{0.45 \text{ s}}$ \\
+        $120 \text{ km/h}$ ($33.3 \text{ m/s}$) & $50.0 \text{ m}$ & $79.3 \text{ m}$ & $129.3 \text{ m}$ & $\mathbf{0.45 \text{ s}}$ & $\mathbf{1.50 \text{ s}}$ & $\mathbf{3.00 \text{ s}}$ \\
         \hline
     \end{tabularx}
-    \caption{Phân tích động học dừng xe, độ trễ phản xạ sinh học và nguy cơ va chạm khẩn cấp theo các dải vận tốc.}
+    \caption{Phân tích động học dừng xe, độ trễ phản xạ của người lái và Thời gian tới Va chạm (TTC) tại các cự ly bám đuôi khác nhau.}
     \label{tab:kinematics_reaction}
 \end{table}
 
-Bảng \ref{tab:kinematics_reaction} chỉ ra một kết luận vật lý cốt tử: Ở tốc độ $120 \text{ km/h}$ trên cao tốc, nếu xe sau chỉ cách xe trước $15 \text{ m}$, \textbf{Thời gian tới Va chạm (Time-to-Collision - TTC)} chỉ vỏn vẹn $0.45$ giây. Giá trị này nhỏ hơn nhiều so với thời gian não người kịp nhận biết ($1.5$ giây), biến vụ va chạm liên hoàn đâm dồn toa thành một điều tất yếu nếu chỉ phụ thuộc vào giác quan con người. Ngược lại, thông điệp khẩn cấp V2X có độ trễ truyền thông dưới $10$ mili-giây ($0.01$ s), cho phép kích hoạt hệ thống phanh tự động khẩn cấp (AEB) tức thời, loại bỏ hoàn toàn độ trễ $1.5$ giây của não bộ.
+Bảng \ref{tab:kinematics_reaction} mang lại những kết luận động học giao thông mang tính bản lề khi đối chiếu giữa Thời gian tới Va chạm (Time-to-Collision - TTC) và độ trễ phản xạ của não bộ ($t_{\text{PRT}} = 1.5\text{ s}$):
+\begin{itemize}
+    \item \textbf{Ở cự ly bám đuôi gần $15\text{ m}$:} Tại vận tốc $120 \text{ km/h}$, TTC chỉ vỏn vẹn $\mathbf{0.45\text{ s}}$, thấp hơn rất nhiều so với thời gian phản xạ của não bộ ($1.5\text{ s}$). Điều này đồng nghĩa với việc tài xế chưa kịp nhận biết nguy hiểm và chưa kịp nhấc chân khỏi bàn đạp ga thì va chạm đâm dồn toa khủng khiếp đã xảy ra ở tốc độ tối đa!
+    \item \textbf{Ở cự ly trung bình $50\text{ m}$:} Tại vận tốc $120 \text{ km/h}$, TTC đạt đúng $\mathbf{1.50\text{ s}}$ — trùng khớp tuyệt đối với thời gian phản xạ $t_{\text{PRT}}$. Điều này phản ánh tình huống cực kỳ nguy hiểm: đúng vào khoảnh khắc chân người lái vừa chạm tới bàn đạp phanh thì xe đã va chạm vào chướng ngại vật, hoàn toàn không còn bất kỳ một mét quãng đường phanh nào để hấp thụ xung lực va chạm!
+    \item \textbf{Ở cự ly an toàn chuẩn $100\text{ m}$:} TTC đạt $\mathbf{3.00\text{ s}}$, lớn gấp đôi thời gian phản xạ não bộ. Tài xế có đủ $1.5\text{ s}$ để nhận thức và đạp phanh, sau đó xe có thêm $1.5\text{ s}$ phanh hãm tốc để triệt tiêu phần lớn động năng, giúp tránh được va chạm hoặc giảm thiểu tối đa thương vong.
+\end{itemize}
+Sự đối chiếu trên chứng minh: giác quan con người hoàn toàn bất lực trước các tình huống khẩn cấp ở tốc độ cao khi bám đuôi cự ly dưới $50\text{ m}$. Trong khi đó, mạng truyền thông V2X với độ trễ siêu thấp dưới $10\text{ ms}$ ($0.01\text{ s}$) cho phép kích hoạt hệ thống Phanh Khẩn cấp Tự động (AEB) tức thì, xóa bỏ hoàn toàn độ trễ $1.5\text{ s}$ do giới hạn phản xạ của người lái.
 
 \subsubsection{Thực trạng Bám đuôi Thiếu Khoảng cách An toàn tại Việt Nam và Thế giới}
 Mặc dù luật giao thông đường bộ ở hầu hết các quốc gia đều quy định nghiêm ngặt khoảng cách an toàn (dựa trên quy tắc 2 giây hoặc 3 giây), trong thực tế vận hành hàng ngày, tình trạng phương tiện bám đuôi cự ly ngắn (tailgating) diễn ra hết sức phổ biến:
@@ -371,7 +377,7 @@ Khi mạng lưới giao thông mở rộng quy mô lên hàng ngàn nút giao v�
 \begin{itemize}
     \item \textbf{Thuật toán Tìm kiếm Cấm (Tabu Search):} Nghiên cứu của Ru kết hợp duyệt đồ thị với Tabu Search để tối ưu hóa vận tải đa phương thức khi có sự cố tắc nghẽn, đạt độ chính xác cao hơn Giải thuật Di truyền (GA) và Tôi luyện Thép (Simulated Annealing), mặc dù chi phí tính toán cao hơn.
     \item \textbf{Thuật toán Tối ưu hóa Bầy chim Sẻ hỗn loạn (SFSSA):} Liu et al. kết hợp ánh xạ hỗn loạn (chaotic mapping), thuật toán lượng giác Sine-Cosine và nhiễu loạn đom đóm (firefly perturbation) để nâng cao tính đa dạng của nghiệm và tốc độ hội tụ trong bài toán định tuyến đội xe (VRP).
-    \item \textbf{Thuật toán Đàn kiến (Ant Colony Optimization - ACO):} Mô phỏng cơ chế tiết pheromone của loài kiến. Khi một đoạn đường bị tai nạn chặn đứng, nồng độ pheromone nhân tạo trên nhánh đó bị triệt tiêu ngay lập tức, hướng các đàn xe tìm kiếm các lối rẽ thay thế tối ưu.
+    \item \textbf{Thuật toán Đàn kiến (ACO):} Mô phỏng cơ chế tiết pheromone của loài kiến (Ant Colony Optimization). Khi một đoạn đường bị tai nạn chặn đứng, nồng độ pheromone nhân tạo trên nhánh đó bị triệt tiêu ngay lập tức, hướng các đàn xe tìm kiếm các lối rẽ thay thế tối ưu.
 \end{itemize}
 
 \begin{table}[H]
