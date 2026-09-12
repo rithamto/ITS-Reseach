@@ -25,11 +25,13 @@
 \usepackage{xcolor}
 \usepackage{array}
 \usepackage{tabularx}
+\usepackage{enumitem}
+\setlist{itemsep=2pt, topsep=3pt, parsep=0pt, partopsep=0pt}
 
 % Cấu hình Fancy Header & Footer
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\fontsize{9pt}{11pt}\selectfont Quản lý Giao thông Nhận thức Tai nạn \& Tối ưu Định tuyến V2X}
+\fancyhead[L]{\fontsize{9pt}{11pt}\selectfont Quản lý Giao thông Thích ứng Tai nạn \& Tối ưu Định tuyến V2X}
 \fancyhead[R]{\fontsize{9pt}{11pt}\selectfont Báo cáo Tiểu luận Hệ thống Giao thông Thông minh}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
@@ -65,7 +67,7 @@
         \fontsize{15pt}{18pt}\selectfont
         \textbf{ĐỀ TÀI:} \\
         \vspace{0.4cm}
-        \textbf{TIẾN BỘ TRONG QUẢN LÝ GIAO THÔNG NHẬN THỨC TAI NẠN: TỔNG QUAN TOÀN DIỆN VỀ TỐI ƯU HÓA ĐỊNH TUYẾN VÀ AN TOÀN DỰA TRÊN MẠNG KẾT NỐI V2X} \\
+        \textbf{TIẾN BỘ TRONG QUẢN LÝ GIAO THÔNG THÍCH ỨNG TAI NẠN: TỔNG QUAN TOÀN DIỆN VỀ TỐI ƯU HÓA ĐỊNH TUYẾN VÀ AN TOÀN DỰA TRÊN MẠNG KẾT NỐI V2X} \\
     \endgroup
     
     \vspace{2.0cm}
@@ -94,11 +96,11 @@
 \begin{abstract}
 \noindent Khi dân số đô thị không ngừng gia tăng và mật độ phương tiện cơ giới bùng nổ, tình trạng ùn tắc giao thông và tai nạn đường bộ đang trở thành những thách thức nghiêm trọng nhất đối với xã hội hiện đại. Các phương pháp quản lý giao thông truyền thống, vốn phụ thuộc vào các quy tắc tĩnh và hệ thống điều khiển trung tâm cố định chu kỳ, hoàn toàn bất lực trước tính biến động khó lường của các sự cố va chạm và tai nạn giao thông thời gian thực. Điều này dẫn đến thời gian di chuyển kéo dài, lãng phí hàng triệu lít nhiên liệu, gia tăng lượng khí thải độc hại và đặc biệt là nguy cơ xảy ra các vụ tai nạn dồn toa liên hoàn thứ cấp trên các tuyến cao tốc huyết mạch.
 
-Công nghệ Giao tiếp Phương tiện với Vạn vật (Vehicle-to-Everything - V2X) đã nổi lên như một giải pháp đột phá mang tính cách mạng, kiến tạo nên một hệ sinh thái giao thông thời gian thực định hướng dữ liệu. Dựa trên công trình nghiên cứu tổng quan mang tính bước ngoặt của nhóm tác giả Hossam M. Zohir và cộng sự công bố trên tạp chí danh tiếng \textit{Scientific Reports} (Nature Portfolio, cuối năm 2025/2026), báo cáo tiểu luận này tiến hành phân tích chuyên sâu và hệ thống hóa toàn diện các tiến bộ kỹ thuật trong lĩnh vực \textbf{Quản lý Giao thông Nhận thức Tai nạn (Accident-Aware Traffic Management - AATM)} dựa trên mạng V2X:
+Công nghệ Giao tiếp Phương tiện với Vạn vật (Vehicle-to-Everything - V2X) đã nổi lên như một giải pháp đột phá mang tính cách mạng, kiến tạo nên một hệ sinh thái giao thông thời gian thực định hướng dữ liệu. Dựa trên công trình nghiên cứu tổng quan mang tính bước ngoặt của nhóm tác giả Hossam M. Zohir và cộng sự công bố trên tạp chí danh tiếng \textit{Scientific Reports} (Nature Portfolio, cuối năm 2025/2026), báo cáo tiểu luận này tiến hành phân tích chuyên sâu và hệ thống hóa toàn diện các tiến bộ kỹ thuật trong lĩnh vực \textbf{Quản lý Giao thông Thích ứng Tai nạn (Accident-Aware Traffic Management - AATM)} dựa trên mạng V2X:
 \begin{enumerate}
     \item \textbf{Nền tảng truyền thông V2X và Hệ thống Giao thông Thông minh (ITS):} Phân tích bốn tương tác cốt lõi gồm V2V, V2I, V2P, V2N; đối chiếu chuyên sâu giữa chuẩn DSRC (IEEE 802.11p) và Cellular-V2X (C-V2X / 5G NR Sidelink) về độ trễ siêu thấp (URLLC), thông lượng và độ tin cậy trong môi trường mật độ cao; vai trò của các trạm ven đường (RSU), thiết bị trên xe (OBU) và kiến trúc Điện toán biên (Edge Computing/MEC).
-    \item \textbf{Chiến lược định tuyến nhận thức tai nạn (Accident-Aware Routing):} Nghiên cứu quy trình khép kín từ phát hiện sự cố tự động (qua cảm biến OBU, học chuyển giao MobileNet/ResNet, xử lý dữ liệu lớn), phát tán thông điệp khẩn cấp (DENM/CAM đa chặng), đến tái định tuyến động phân tán nhằm giải tỏa ùn tắc nút cổ chai và thiết lập hành lang cứu hộ ưu tiên (Emergency Green Wave).
-    \item \textbf{Hệ thống giải thuật tối ưu hóa định tuyến:} Phân loại và đánh giá thực nghiệm ba trường phái thuật toán hàng đầu: Giải thuật đồ thị kinh điển cải tiến ($A^*$, Asymptotically Optimal $A^*$, Directional Search $A^*$, kết hợp mạng tích chập không-thời gian ST-GCN); Giải thuật tối ưu phỏng sinh học / Metaheuristics (GA, PSO, Thuật toán đàn kiến ACO, Tối ưu hóa bầy nhạn SFSSA, Tabu Search); và Trí tuệ nhân tạo thế hệ mới (Học tăng cường sâu DRL đa tác tử, GNN).
+    \item \textbf{Chiến lược định tuyến thích ứng tai nạn (Accident-Aware Routing):} Nghiên cứu quy trình khép kín từ phát hiện sự cố tự động (qua cảm biến OBU, học chuyển giao MobileNet/ResNet, xử lý dữ liệu lớn), phát tán thông điệp khẩn cấp (DENM/CAM đa chặng), đến tái định tuyến động phân tán nhằm giải tỏa ùn tắc nút cổ chai và thiết lập hành lang cứu hộ ưu tiên (Emergency Green Wave).
+    \item \textbf{Hệ thống giải thuật tối ưu hóa định tuyến:} Phân loại và đánh giá thực nghiệm ba trường phái thuật toán hàng đầu: Giải thuật đồ thị kinh điển cải tiến ($A^*$, Asymptotically Optimal $A^*$, Directional Search $A^*$, kết hợp mạng tích chập không-thời gian ST-GCN); Giải thuật tối ưu phỏng sinh học / Metaheuristics (GA, PSO, Thuật toán đàn kiến ACO, Tối ưu hóa bầy chim sẻ SFSSA, Tabu Search); và Trí tuệ nhân tạo thế hệ mới (Học tăng cường sâu DRL đa tác tử, GNN).
     \item \textbf{Mở rộng góc nhìn thực tế:} Kết hợp nghiên cứu về cơ chế kiểm soát bám đuôi an toàn CACC/Platooning chống dồn toa, giải pháp quản lý nút giao tự động (AIM), hệ thống tự hành đỗ xe (AVP) theo tiêu chuẩn ISO 23374 và bài toán an ninh không gian mạng V2X tại Việt Nam.
 \end{enumerate}
 Báo cáo cung cấp góc nhìn học thuật toàn diện, so sánh định lượng hiệu năng và đề xuất các định hướng nghiên cứu chiến lược nhằm xây dựng mạng lưới giao thông thông minh không tai nạn trong tương lai.
@@ -107,9 +109,15 @@ Báo cáo cung cấp góc nhìn học thuật toàn diện, so sánh định lư
 \clearpage
 
 % ==================== MỤC LỤC & DANH MỤC BẢNG ====================
+\setcounter{tocdepth}{2}
+\begin{singlespace}
+\setlength{\parskip}{0pt}
+{\fontsize{11pt}{13.5pt}\selectfont
 \tableofcontents
-\vspace{1.0cm}
+\vspace{0.15cm}
 \listoftables
+}
+\end{singlespace}
 \clearpage
 
 % ==================== NỘI DUNG CHÍNH (ĐÁNH SỐ Ả RẬP TỪ TRANG 1) ====================
@@ -194,6 +202,7 @@ Mặc dù luật giao thông đường bộ ở hầu hết các quốc gia đ�
 
 Số liệu thực nghiệm từ Bảng \ref{tab:headway_comparison} phản ánh thực trạng đặc biệt báo động tại Việt Nam: khoảng cách bám đuôi thực tế trên các tuyến cao tốc huyết mạch chỉ bằng $1/4$ đến $1/7$ so với quy chuẩn an toàn bắt buộc. Khi dòng xe đông đúc bám sát nhau ở cự ly $10 - 25 \text{ m}$ với tốc độ cao, chỉ cần một chiếc xe đi đầu phanh gấp hoặc xảy ra va chạm nhẹ, toàn bộ đoàn xe phía sau sẽ gặp thảm họa đâm dồn toa hàng loạt (pile-up crash).
 
+\newpage
 \subsubsection{Sự Bất lực của Các Giải pháp Điều phối Truyền thống}
 Trước bối cảnh tai nạn và vi phạm cự ly nêu trên, hạ tầng quản lý giao thông truyền thống bộc lộ những khiếm khuyết chết người:
 \begin{itemize}
@@ -202,7 +211,7 @@ Trước bối cảnh tai nạn và vi phạm cự ly nêu trên, hạ tầng qu
     \item Khi một vụ va chạm xảy ra, lòng đường bị thu hẹp đột ngột tạo ra điểm nghẽn cổ chai (bottleneck), kéo theo hiệu ứng sóng xung kích dừng - đi (Stop-and-Go shockwaves) lan truyền ngược chiều dòng xe. Hậu quả là các vụ tai nạn đâm dồn toa thứ cấp (Secondary/Chain-reaction accidents) với mức độ tàn phá còn thảm khốc hơn vụ va chạm ban đầu.
 \end{itemize}
 
-Để giải quyết bài toán hóc búa này, công nghệ Giao tiếp Phương tiện với Vạn vật (Vehicle-to-Everything - V2X) kết hợp với các kỹ thuật Tối ưu hóa Định tuyến Thông minh đã tạo nên một bước chuyển dịch căn bản: chuyển từ quản lý giao thông \textit{"phản ứng sau sự cố"} (Reactive) sang quản lý \textit{"chủ động nhận thức và phòng ngừa tai nạn"} (Proactive \& Accident-Aware).
+Để giải quyết bài toán hóc búa này, công nghệ Giao tiếp Phương tiện với Vạn vật (Vehicle-to-Everything - V2X) kết hợp với các kỹ thuật Tối ưu hóa Định tuyến Thông minh đã tạo nên một bước chuyển dịch căn bản: chuyển từ quản lý giao thông \textit{"phản ứng sau sự cố"} (Reactive) sang quản lý \textit{"chủ động thích ứng và phòng ngừa tai nạn"} (Proactive \& Accident-Aware).
 
 \subsection{Tổng quan về Công trình Nghiên cứu Trọng tâm}
 Báo cáo tiểu luận này lấy làm nòng cốt công trình tổng quan khoa học đột phá: \textbf{\textit{"Advancements in accident-aware traffic management: a comprehensive review of V2X-based route optimization"}} do nhóm tác giả Hossam M. Zohir, Islam M. Ismael, Eman M. El-Gendy và Mahmoud M. Saafan (Khoa Kỹ thuật, Đại học Mansoura) công bố trên tạp chí danh giá \textit{Scientific Reports} (Nature Portfolio) vào tháng 10 năm 2025 \cite{zohir2025nature} (đã được trích dẫn bởi 17 bài báo khác).
@@ -214,10 +223,11 @@ Khác biệt với các bài khảo cứu trước đây vốn chỉ xem xét V2
     \item Các thuật toán tối ưu hóa đường đi đa mục tiêu (Graph Search, Metaheuristics, Deep Reinforcement Learning) trong việc tái định tuyến luồng xe tức thời nhằm dập tắt ùn tắc và bảo vệ an toàn sinh mạng.
 \end{enumerate}
 
+\newpage
 \subsection{Mục tiêu và Đóng góp của Báo cáo Tiểu luận}
 Mục tiêu cốt lõi của báo cáo tiểu luận này là:
 \begin{itemize}
-    \item Đi sâu phân tích có hệ thống toàn bộ bức tranh công nghệ Quản lý Giao thông Nhận thức Tai nạn (AATM) dựa trên nền tảng V2X từ công trình gốc của Zohir và cộng sự.
+    \item Đi sâu phân tích có hệ thống toàn bộ bức tranh công nghệ Quản lý Giao thông Thích ứng Tai nạn (AATM) dựa trên nền tảng V2X từ công trình gốc của Zohir và cộng sự.
     \item Làm rõ ưu - nhược điểm, độ phức tạp tính toán và phạm vi ứng dụng của từng nhóm thuật toán định tuyến đường đi khi có tai nạn: từ các biến thể thuật toán tìm kiếm đồ thị cải tiến ($A^*$, AOA*, ST-GCN $A^*$), thuật toán phỏng sinh học (GA, PSO, ACO, SFSSA), đến các kỹ thuật Học tăng cường sâu (DRL/MARL).
     \item Mở rộng góc nhìn kỹ thuật bằng cách tích hợp các nghiên cứu chuyên sâu bổ trợ về cơ chế điều khiển bám đuôi xe tải CACC/Platooning chống dồn toa, giải pháp quản lý nút giao tự động (AIM), hệ thống đỗ xe tự hành (AVP) theo tiêu chuẩn ISO 23374 và bài toán an ninh mạng SCMS.
     \item Đánh giá khả năng chuyển giao và đề xuất lộ trình triển khai hạ tầng V2X phục vụ an toàn giao thông tại Việt Nam.
@@ -228,7 +238,7 @@ Báo cáo được tổ chức thành 6 chương:
 \begin{itemize}
     \item \textbf{Chương 1: Giới thiệu} - Trình bày bối cảnh, tính cấp thiết, giới thiệu công trình nòng cốt và mục tiêu nghiên cứu.
     \item \textbf{Chương 2: Nền tảng Công nghệ Truyền thông V2X và Hệ thống ITS} - Phân tích kiến trúc V2X (V2V, V2I, V2P, V2N), so sánh kỹ thuật DSRC và C-V2X (5G NR Sidelink), vai trò của RSU, OBU và Điện toán biên.
-    \item \textbf{Chương 3: Chiến lược Định tuyến Nhận thức Tai nạn trong Mạng V2X} - Phân tích kỹ thuật phát hiện tai nạn qua AI/Transfer Learning, quy trình lan truyền thông điệp khẩn cấp và mô hình phân luồng giao thông chủ động.
+    \item \textbf{Chương 3: Chiến lược Định tuyến Thích ứng Tai nạn trong Mạng V2X} - Phân tích kỹ thuật phát hiện tai nạn qua AI/Transfer Learning, quy trình lan truyền thông điệp khẩn cấp và mô hình phân luồng giao thông chủ động.
     \item \textbf{Chương 4: Các Giải thuật Tối ưu hóa Định tuyến Động khi Xảy ra Tai nạn} - Khảo sát chuyên sâu các giải thuật tìm kiếm đồ thị ($A^*$, AOA*, ST-GCN $A^*$), giải thuật Metaheuristics và mô hình Học máy / Học tăng cường sâu (DRL).
     \item \textbf{Chương 5: Thảo luận Chuyên sâu, Đánh đổi Kỹ thuật và Thách thức Triển khai} - So sánh đa chiều giữa các phương pháp, độ trễ và mất gói tin, an ninh không gian mạng và định hướng áp dụng tại Việt Nam.
     \item \textbf{Chương 6: Kết luận, Phương hướng Phát triển và Kiến nghị} - Tổng kết các đóng góp chính, định hướng mở rộng sang an toàn cao tốc, đoàn xe, đỗ xe tự hành và đề xuất giải pháp kỹ thuật.
@@ -261,7 +271,9 @@ Theo phân tích của Zohir và cộng sự \cite{zohir2025nature}, mạng truy
     \label{fig:v2x_ecosystem}
 \end{figure}
 
-Sự phối hợp nhịp nhàng giữa bốn phương thức này tạo điều kiện cho các thuật toán định tuyến nhận thức tai nạn thu thập dữ liệu đa chiều, từ trạng thái vi mô của từng xe đến bức tranh lưu thông vĩ mô của toàn bộ mạng lưới đường bộ.
+Sự phối hợp nhịp nhàng giữa bốn phương thức này tạo điều kiện cho các thuật toán định tuyến thích ứng tai nạn thu thập dữ liệu đa chiều, từ trạng thái vi mô của từng xe đến bức tranh lưu thông vĩ mô của toàn bộ mạng lưới đường bộ.
+
+Đặc biệt, trong bài toán quản lý thích ứng tai nạn, phân hệ V2V và V2I đóng vai trò phòng vệ hai lớp sống còn. Phân hệ V2V chịu trách nhiệm kích hoạt phản xạ vi mô tức thời giữa các phương tiện cùng lưu thông trong phạm vi $300 - 500\text{ m}$ để triệt tiêu nguy cơ đâm dồn toa liên hoàn khi xe phía trước phanh gấp. Trong khi đó, phân hệ V2I mở rộng tầm nhìn nhận thức của xe lên hàng kilômét thông qua mạng lưới RSU ven đường, đóng vai trò trạm tiếp sóng và cập nhật trọng số giao thông thời gian thực cho các thuật toán tái định tuyến vĩ mô. Sự kết hợp giữa truyền thông ngang hàng trực tiếp (không phụ thuộc hạ tầng mạng di động) và mạng lưới hạ tầng điều phối thông minh tạo nên một lá chắn an toàn toàn diện cho dòng phương tiện.
 
 \subsection{So sánh Kỹ thuật: DSRC và C-V2X (5G NR Sidelink)}
 Trong lịch sử phát triển của V2X, hai công nghệ vô tuyến đối đầu trực tiếp là DSRC (Dedicated Short-Range Communications dựa trên IEEE 802.11p) và Cellular V2X (C-V2X do 3GPP chuẩn hóa từ LTE-V2X đến 5G NR-V2X Release 16/17). Bài báo của Zohir và cộng sự đã tổng kết các đặc tính kỹ thuật cốt lõi định hình năng lực phản ứng tai nạn của hai nền tảng này:
@@ -275,7 +287,7 @@ Trong lịch sử phát triển của V2X, hai công nghệ vô tuyến đối �
         \hline
         Dải tần hoạt động & 5.850 - 5.925 GHz (Kênh ITS 5.9 GHz) & 5.9 GHz ITS band, sub-6 GHz và mmWave (FR2) \\
         \hline
-        Lớp vật lý \& Đa truy cập & CSMA/CA (Cảm nhận sóng mang, né tránh va chạm gói) & SC-FDMA / OFDMA với Lập lịch Bán kiên định (SPS) \\
+        Lớp vật lý \& Đa truy cập & CSMA/CA (Lắng nghe kênh truyền, tránh xung đột) & SC-FDMA / OFDMA với Lập lịch Bán kiên định (SPS) \\
         \hline
         Độ trễ truyền vô tuyến & 5 - 20 ms (tăng vọt khi mật độ xe cao do nghẽn kênh) & $< 3$ ms (URLLC, duy trì ổn định ngay cả khi tắc đường) \\
         \hline
@@ -295,7 +307,7 @@ Trong lịch sử phát triển của V2X, hai công nghệ vô tuyến đối �
 Phân tích định lượng chỉ ra rằng mặc dù DSRC có ưu điểm là giao thức đơn giản, chi phí triển khai ban đầu thấp và không phụ thuộc vào nhà mạng viễn thông, nhưng cơ chế tranh chấp kênh CSMA/CA khiến DSRC dễ bị sụp đổ hiệu năng (Broadcast Storm) khi xảy ra tai nạn dồn ứ trên cao tốc. Ngược lại, 5G NR-V2X với chế độ Sidelink Mode 2 tự trị hoàn toàn, kết hợp khoảng cách sóng mang phụ linh hoạt (Subcarrier Spacing lên tới 120/240 kHz) và mã sửa sai tiên tiến (LDPC/Polar Codes) đảm bảo độ trễ siêu thấp dưới 3 ms, là điều kiện tiên quyết để kích hoạt các thuật toán tái định tuyến thời gian thực.
 
 \subsection{Kiến trúc Tích hợp ITS: Cảm biến, RSU, OBU và Điện toán Biên (Edge Computing)}
-Hệ thống Giao thông Thông minh (ITS) nhận thức tai nạn được cấu thành từ ba lớp kiến trúc chính:
+Hệ thống Giao thông Thông minh (ITS) thích ứng tai nạn được cấu thành từ ba lớp kiến trúc chính:
 \begin{enumerate}
     \item \textbf{Lớp Thu nhận Cảm biến (Sensing Layer):} Gồm các cảm biến tự thân trên phương tiện (Camera, LiDAR 3D, Radar sóng milimet, IMU đo gia tốc) kết hợp với các camera giám sát giao thông AI gắn trên giá long môn cao tốc. Các cảm biến này đo đạc dòng xe, mật độ lưu thông và nhận dạng va chạm.
     \item \textbf{Lớp Giao tiếp \& Điều khiển Rìa (Edge \& Communication Layer):} 
@@ -307,13 +319,46 @@ Hệ thống Giao thông Thông minh (ITS) nhận thức tai nạn được cấ
     \item \textbf{Lớp Ứng dụng Quản lý Giao thông (Traffic Management Layer):} Trung tâm Điều hành Giao thông (TMC - Traffic Management Center) tổng hợp dữ liệu vĩ mô, điều phối làn sóng xanh cho xe cấp cứu, và cập nhật trọng số bản đồ số cho các thuật toán tìm đường.
 \end{enumerate}
 
+\subsection{Tiêu chuẩn và Cơ chế Định dạng Thông điệp Khẩn cấp V2X: ETSI CAM và DENM}
+Để các thuật toán định tuyến và ứng phó tai nạn hoạt động hiệu quả, dữ liệu trao đổi qua mạng V2X bắt buộc phải tuân theo các khung thông điệp tiêu chuẩn hóa toàn cầu do Viện Tiêu chuẩn Viễn thông Châu Âu (ETSI) ban hành:
+\begin{enumerate}
+    \item \textbf{Thông điệp Nhận thức Hợp tác (Cooperative Awareness Message - CAM):}
+    Theo chuẩn ETSI EN 302 637-2, CAM là các thông điệp "nhịp tim" (heartbeat) được mỗi phương tiện phát quảng bá định kỳ với tần suất từ $1\text{ Hz}$ đến $10\text{ Hz}$ (tùy thuộc vào động học di chuyển). Một gói tin CAM tiêu chuẩn bao gồm ba khối dữ liệu cốt lõi (Containers):
+    \begin{itemize}
+        \item \textit{Basic Container:} Chứa định danh giả danh (Pseudonym ID), loại phương tiện (xe con, xe tải, xe cứu hỏa) và tọa độ vị trí địa lý tức thời (WGS84).
+        \item \textit{High-Frequency Container:} Chứa các tham số động học vi mô biến đổi nhanh với độ chính xác cao: vận tốc tức thời, gia tốc dọc/ngang, góc quay thân xe (yaw rate), góc đánh lái vô lăng và trạng thái kích hoạt bàn đạp phanh.
+        \item \textit{Low-Frequency Container:} Cung cấp thông tin trạng thái đèn tín hiệu, hướng đèn xi-nhan và kích thước hình học chính xác của phương tiện (chiều dài, chiều rộng).
+    \end{itemize}
+    Dữ liệu CAM liên tục từ các phương tiện lân cận cho phép OBU và MEC xây dựng bản đồ nhận thức môi trường cục bộ (Local Dynamic Map - LDM) với độ trễ dưới $20\text{ ms}$.
+
+    \item \textbf{Thông điệp Cảnh báo Môi trường Phi tập trung (Decentralized Environmental Notification Message - DENM):}
+    Theo chuẩn ETSI EN 302 637-3, trái ngược với CAM phát định kỳ, DENM là thông điệp kích hoạt theo sự kiện (event-triggered), chỉ được sinh ra khi phát hiện sự cố nguy hiểm đột xuất như tai nạn giao thông, chướng ngại vật hoặc phanh khẩn cấp:
+    \begin{itemize}
+        \item \textit{Management Container:} Gán mã định danh duy nhất cho vụ tai nạn (\texttt{ActionID}), thời điểm phát hiện, và thời gian hiệu lực tồn tại của cảnh báo (\texttt{validityDuration}).
+        \item \textit{Situation Container:} Phân loại mức độ nghiêm trọng và nguyên nhân sự cố thông qua hệ thống mã hóa \texttt{CauseCode} (ví dụ: mã va chạm giao thông, đường trơn trượt do dầu loang, xe mất kiểm soát).
+        \item \textit{Location Container:} Định nghĩa tọa độ chính xác của tâm điểm tai nạn và chiều dài đoạn đường chịu ảnh hưởng trực tiếp ($L_{\text{impact}}$).
+        \item \textit{Transmission Container:} Thiết lập bán kính vùng phát tán cảnh báo có liên quan (Relevance Area) và cấu hình số chặng chuyển tiếp tối đa (Hop Limit) cho cơ chế định tuyến địa lý đa chặng (GeoNetworking).
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Cơ chế Kiểm soát Nghẽn Kênh truyền Phi tập trung (Decentralized Congestion Control - DCC)}
+Trong kịch bản xảy ra tai nạn nghiêm trọng trên đường cao tốc, lưu lượng xe dồn ứ với mật độ cực cao (lên tới $150 - 200\text{ xe/km/làn}$). Nếu tất cả các phương tiện cùng liên tục phát gói tin CAM và DENM ở tần số tối đa $10\text{ Hz}$, môi trường truyền sóng 5.9 GHz sẽ nhanh chóng bị quá tải nghiêm trọng, dẫn đến hiện tượng suy kiệt tài nguyên vô tuyến và bão phát sóng (Broadcast Storm). Tỷ lệ mất gói tin có thể vọt lên trên $60\%$, làm tê liệt hoàn toàn khả năng nhận thức của các thuật toán định tuyến.
+
+Để giải quyết thách thức này, kiến trúc mạng V2X tích hợp bắt buộc cơ chế \textbf{Kiểm soát Nghẽn Phi tập trung (Decentralized Congestion Control - DCC)} theo tiêu chuẩn ETSI TS 102 687. Cơ chế DCC liên tục giám sát tham số Tỷ lệ Chiếm dụng Kênh (Channel Busy Ratio - CBR). Khi $\text{CBR}$ vượt ngưỡng cảnh báo an toàn ($\text{CBR} > 60\%$), thuật toán DCC tự động thực thi ba cấp độ điều tiết động:
+\begin{itemize}
+    \item \textbf{Điều khiển Tần suất Phát (Transmit Rate Control - TRC):} Tự động giãn chu kỳ phát CAM của các xe không liên quan trực tiếp từ $10\text{ Hz}$ xuống $2\text{ Hz}$ hoặc $1\text{ Hz}$, ưu tiên tuyệt đối băng thông cho các gói tin DENM báo tai nạn khẩn cấp.
+    \item \textbf{Điều khiển Công suất Phát (Transmit Power Control - TPC):} Giảm công suất phát từ $23\text{ dBm}$ xuống mức $10 - 15\text{ dBm}$, thu hẹp bán kính nhiễu cục bộ để bảo vệ kênh truyền cho các nút mạng lân cận.
+    \item \textbf{Điều khiển Tốc độ Dữ liệu (Transmit Data Rate - TDR):} Chuyển đổi linh hoạt lược đồ điều chế và mã hóa (MCS) sang các bậc điều chế cao hơn nhằm rút ngắn thời gian chiếm dụng không gian của mỗi khung truyền.
+\end{itemize}
+Nhờ cơ chế phối hợp DCC này, mạng truyền thông duy trì được độ trễ dưới $10\text{ ms}$ cho các thông điệp sinh tử ngay cả trong điều kiện mật độ giao thông nghẽn đặc.
+
 \clearpage
 
 % ==================== CHƯƠNG 3 ====================
-\section{Chiến lược Định tuyến Nhận thức Tai nạn trong Mạng V2X}
+\section{Chiến lược Định tuyến Thích ứng Tai nạn trong Mạng V2X}
 
 \subsection{Kỹ thuật Phát hiện và Dự đoán Mức độ Nghiêm trọng của Tai nạn}
-Trọng tâm đột phá của một hệ thống giao thông nhận thức tai nạn (Accident-Aware) là khả năng phát hiện va chạm ngay tại thời khắc xảy ra và ước lượng chính xác mức độ nghiêm trọng để có phương án xử lý thích ứng \cite{zohir2025nature}.
+Trọng tâm đột phá của một hệ thống giao thông thích ứng tai nạn (Accident-Aware) là khả năng phát hiện va chạm ngay tại thời khắc xảy ra và ước lượng chính xác mức độ nghiêm trọng để có phương án xử lý thích ứng \cite{zohir2025nature}.
 
 \subsubsection{Ứng dụng Học Chuyển Giao (Transfer Learning) và Trí Tuệ Nhân Tạo}
 Theo tổng kết của Zohir và cộng sự, việc phát hiện tai nạn không còn phụ thuộc vào các cuộc gọi khẩn cấp thủ công từ người dân. Thay vào đó, các mô hình Deep Learning tiên tiến được tích hợp trên các OBU và RSU camera:
@@ -338,9 +383,9 @@ Khi một vụ va chạm xảy ra tại vị trí $X_{\text{accident}}$ trên ca
 \end{enumerate}
 
 \subsection{Cơ chế Tái Định tuyến Động Phân tán (Dynamic Rerouting)}
-Sau khi thông điệp tai nạn được xác thực, bài toán quan trọng nhất là: \textbf{Làm thế nào để điều hướng hàng ngàn phương tiện đang lao tới mà không biến tuyến đường tránh thành một bãi kẹt xe mới?}
+Sau khi thông điệp tai nạn được xác thực, bài toán quan trọng nhất là: \textbf{Làm thế nào để điều hướng hàng ngàn phương tiện đang lao tới mà không biến tuyến đường tránh thành một điểm ùn tắc mới?}
 
-Hệ thống quản lý nhận thức tai nạn chia dòng xe thành ba nhóm mục tiêu xử lý:
+Hệ thống quản lý thích ứng tai nạn chia dòng xe thành ba nhóm mục tiêu xử lý:
 \begin{itemize}
     \item \textbf{Vùng Nguy hiểm Trực tiếp (Immediate Danger Zone - $< 200$ m):} Các xe chạy ngay sau điểm va chạm. Mục tiêu là kích hoạt hệ thống Phanh khẩn cấp tự động (AEB) và hỗ trợ chuyển làn khẩn cấp (Emergency Lane Change) để tránh đâm dồn toa vào hiện trường.
     \item \textbf{Vùng Tái định tuyến Chiến thuật (Tactical Rerouting Zone - $200 \text{ m} - 2000 \text{ m}$):} Các xe chuẩn bị tiến vào đoạn đường tai nạn nhưng vẫn còn cơ hội rẽ sang các lối thoát cao tốc (Off-ramps) hoặc đường gom. Thuật toán tối ưu hóa định tuyến sẽ tính toán lộ trình thay thế cho từng nhóm xe.
@@ -377,7 +422,8 @@ Khi mạng lưới giao thông mở rộng quy mô lên hàng ngàn nút giao v�
 \begin{itemize}
     \item \textbf{Thuật toán Tìm kiếm Cấm (Tabu Search):} Nghiên cứu của Ru kết hợp duyệt đồ thị với Tabu Search để tối ưu hóa vận tải đa phương thức khi có sự cố tắc nghẽn, đạt độ chính xác cao hơn Giải thuật Di truyền (GA) và Tôi luyện Thép (Simulated Annealing), mặc dù chi phí tính toán cao hơn.
     \item \textbf{Thuật toán Tối ưu hóa Bầy chim Sẻ hỗn loạn (SFSSA):} Liu et al. kết hợp ánh xạ hỗn loạn (chaotic mapping), thuật toán lượng giác Sine-Cosine và nhiễu loạn đom đóm (firefly perturbation) để nâng cao tính đa dạng của nghiệm và tốc độ hội tụ trong bài toán định tuyến đội xe (VRP).
-    \item \textbf{Thuật toán Đàn kiến (ACO):} Mô phỏng cơ chế tiết pheromone của loài kiến (Ant Colony Optimization). Khi một đoạn đường bị tai nạn chặn đứng, nồng độ pheromone nhân tạo trên nhánh đó bị triệt tiêu ngay lập tức, hướng các đàn xe tìm kiếm các lối rẽ thay thế tối ưu.
+    \item \textbf{Giải thuật Di truyền Cải tiến (Adaptive Genetic Algorithm - AGA):} Mô phỏng cơ chế tiến hóa chọn lọc tự nhiên với toán tử lai ghép phân đoạn (Order Crossover) và đột biến thích nghi theo mật độ cá thể. Khi có tai nạn, AGA phân rã dòng xe thành nhiều nhóm nhỏ gán cho các lộ trình thay thế khác nhau, ngăn chặn triệt để hiện tượng dòng xe chuyển hướng đồng loạt gây tắc nghẽn thứ cấp tại các tuyến đường nhánh lân cận.
+    \item \textbf{Tối ưu hóa Bầy đàn Hạt Đa mục tiêu (MO-PSO):} Từng phương tiện hoạt động như một hạt cập nhật vectơ vận tốc và vị trí dựa trên kinh nghiệm cá nhân tốt nhất ($p_{\text{best}}$) và kinh nghiệm bầy đàn ($g_{\text{best}}$). Nhận thông điệp DENM từ RSU, hàm mục tiêu tức thời nâng cao hệ số phạt cho các cung đường lân cận tâm chấn va chạm, hướng toàn bộ bầy xe hội tụ mượt mà về các tuyến đường vành đai thông thoáng.
 \end{itemize}
 
 \begin{table}[H]
@@ -412,8 +458,44 @@ Xu hướng tiên phong nhất trong giai đoạn 2025 - 2026 là sự kết h�
         r_t = - \left[ w_1 \cdot T_{\text{travel}} + w_2 \cdot \mathbb{I}_{\text{congestion}} + w_3 \cdot \mathbb{I}_{\text{crash\_risk}} \right]
     \end{equation}
     Các tác tử tự học chính sách điều khiển tối ưu $\pi(a|s)$ thông qua tương tác liên tục, giải quyết triệt để hiện tượng "tất cả cùng chuyển sang một tuyến đường tránh gây kẹt xe dây chuyền".
-    \item \textbf{Tích hợp DRL với Heuristic (ALNS):} Nghiên cứu của Wang et al. kết hợp DRL với Thuật toán Tìm kiếm Lân cận Lớn Thích ứng (Adaptive Large Neighborhood Search - ALNS), tối ưu hóa lộ trình xe điện và vị trí trạm sạc khi có sự cố tắc nghẽn trên mạng lưới giao thông.
+    \item \textbf{Tích hợp DRL với Heuristic (ALNS):} Nghiên cứu của Wang et al. kết hợp DRL với Thuật toán Tìm kiếm Lân cận Lớn Thích ứng (ALNS), tối ưu hóa lộ trình xe điện và vị trí trạm sạc khi có sự cố tắc nghẽn giao thông.
+    \item \textbf{Mạng Nơ-ron Đồ thị Không - Thời gian (ST-GNN):} Mô hình biểu diễn giao thông dưới dạng đồ thị động $\mathcal{G} = (\mathcal{V}, \mathcal{E}, \mathbf{W})$. Khối tích chập đồ thị (GCN) trích xuất tương quan không gian liên tuyến, kết hợp mạng cổng định kỳ (GRU) để dự báo tốc độ và mật độ dòng xe trong 15, 30 và 45 phút tới. Nhờ đó, thuật toán định tuyến $A^*$ có thể đón đầu ùn tắc và chủ động điều hướng luồng xe trước khi điểm nghẽn thứ cấp bùng phát.
+    \item \textbf{Học Tăng cường Liên minh (Federated RL - FRL):} Để bảo vệ quyền riêng tư (không truyền GPS cá nhân lên Cloud), mỗi OBU tự học chính sách DRL cục bộ. Định kỳ, các xe chỉ gửi trọng số cập nhật vi sai về MEC/RSU để tổng hợp mô hình toàn cục qua thuật toán FedAvg: $\mathbf{w}_{t+1} = \sum_{k=1}^K \frac{n_k}{n} \mathbf{w}_{t+1}^k$, đảm bảo tối ưu hóa định tuyến phân tán an toàn tuyệt đối.
 \end{itemize}
+
+\subsection{Khung Kiến trúc Mô phỏng Đồng bộ (Co-Simulation Framework)}
+Do chi phí tốn kém và nguy cơ tai nạn thực tế, việc kiểm chứng các thuật toán định tuyến thích ứng tai nạn được thực thi trên nền tảng mô phỏng đồng thời (Co-simulation) hai lớp:
+\begin{enumerate}
+    \item \textbf{Lớp Mô phỏng Giao thông Vi mô (SUMO):} Phần mềm SUMO mô phỏng động học từng xe theo mô hình vật lý chuẩn (Krauss, IDM, LC2013) trên mạng lưới đường bản đồ OpenStreetMap.
+    \item \textbf{Lớp Mô phỏng Mạng Viễn thông (OMNeT++ / ns-3):} Tái lập trung thực kênh truyền không dây DSRC (802.11p) và 5G NR C-V2X (Release 16), đo đạc chính xác độ trễ và mất gói tin.
+    \item \textbf{Cầu nối Thời gian thực (TraCI / Veins Framework):} Khung mô phỏng Veins kết nối SUMO và OMNeT++ qua giao thức TraCI (TCP socket). Khi có va chạm trong SUMO, xe nạn báo sang OMNeT++ để phát DENM; các xe nhận tin chạy thuật toán định tuyến ($A^*$ hoặc DRL) và ra lệnh cho SUMO đổi hướng tức thời.
+\end{enumerate}
+
+\subsubsection{Đánh giá Đối chiếu các Môi trường Mô phỏng ITS Tiên tiến}
+Để lựa chọn môi trường thử nghiệm phù hợp cho từng lớp thuật toán định tuyến, Bảng \ref{tab:simulation_tools} tổng hợp các đặc tính kỹ thuật của các nền tảng mô phỏng phổ biến nhất hiện nay:
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.4cm}|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}p{3.2cm}|}
+        \hline
+        \textbf{Phần mềm mô phỏng} & \textbf{Lớp chuyên môn chính} & \textbf{Ưu điểm nổi bật} & \textbf{Hạn chế kỹ thuật} \\
+        \hline
+        \textbf{SUMO} & Mô phỏng giao thông vi mô & Mã nguồn mở, hiệu năng cực cao ($> 100.000$ xe), hỗ trợ giao diện TraCI hoàn hảo. & Đồ họa 2D đơn giản, không mô phỏng cảm biến vật lý chi tiết. \\
+        \hline
+        \textbf{OMNeT++ / Veins} & Mô phỏng mạng viễn thông & Hỗ trợ đầy đủ chuẩn 802.11p (DSRC) và C-V2X Sidelink, đo đạc độ trễ và mất gói chính xác. & Tốn tài nguyên tính toán khi mạng lưới nút xe vượt quá $5.000$ nút. \\
+        \hline
+        \textbf{ns-3} & Mô phỏng mạng truyền thông sâu & Tích hợp mô hình 5G-LENA hoàn chỉnh, hỗ trợ đa truy cập NR Sidelink tiên tiến. & Cấu hình phức tạp trên C++, tốc độ mô phỏng chậm hơn OMNeT++. \\
+        \hline
+        \textbf{CARLA / AirSim} & Mô phỏng cảm biến và xe tự hành & Đồ họa Unreal Engine 3D chân thực, mô phỏng LiDAR, Camera RGB, Radar chính xác. & Nặng về GPU, khó mô phỏng mạng lưới quy mô hàng chục km cao tốc. \\
+        \hline
+    \end{tabularx}
+    \caption{So sánh đặc tính kỹ thuật của các nền tảng mô phỏng trong nghiên cứu ITS và V2X.}
+    \label{tab:simulation_tools}
+\end{table}
+
+\subsubsection{Thử nghiệm Phần cứng trong Vòng lặp (Hardware-in-the-Loop - HIL)}
+Bên cạnh mô phỏng thuần túy trên phần mềm, bước tiến gần nhất tới thực tế là phương pháp thử nghiệm Phần cứng trong vòng lặp (HIL). Trong thiết lập này, các thiết bị OBU thực tế (sử dụng chip xử lý NXP RoadLINK hoặc Qualcomm 9150 C-V2X) được kết nối vật lý với máy tính mô phỏng qua kênh vô tuyến có suy hao mô phỏng. Thuật toán định tuyến nhúng trên OBU chạy song song với dòng xe ảo trong SUMO, qua đó đo đạc chính xác thời gian trễ phần cứng thực tế, mức độ tiêu thụ năng lượng và độ tin cậy của việc ra quyết định trước khi lắp đặt đại trà trên các dòng xe thương mại.
 
 \clearpage
 
@@ -421,7 +503,7 @@ Xu hướng tiên phong nhất trong giai đoạn 2025 - 2026 là sự kết h�
 \section{Thảo luận Chuyên sâu, Đánh đổi Kỹ thuật và Thách thức Triển khai}
 
 \subsection{Đánh đổi Cốt lõi giữa Độ trễ Tính toán và Độ tối ưu Đường đi}
-Trong bài báo \textit{Scientific Reports}, Zohir và cộng sự đã chỉ ra một sự đánh đổi căn bản (Trade-off) chi phối toàn bộ hệ thống quản lý giao thông nhận thức tai nạn:
+Trong bài báo \textit{Scientific Reports}, Zohir và cộng sự đã chỉ ra một sự đánh đổi căn bản (Trade-off) chi phối toàn bộ hệ thống quản lý giao thông thích ứng tai nạn:
 \begin{equation}
     T_{\text{response}} = T_{\text{detection}} + T_{\text{transmission}} + T_{\text{computation}}
 \end{equation}
@@ -436,11 +518,11 @@ Môi trường truyền sóng không dây khi xảy ra tai nạn trên cao tốc
 \subsection{Thách thức An ninh Không gian Mạng và Bảo vệ Quyền Riêng tư}
 Mạng V2X mở ra cánh cửa cho các nguy cơ tấn công mạng nguy hiểm:
 \begin{itemize}
-    \item \textbf{Tấn công Giả mạo Tai nạn (False Incident Injection):} Kẻ tấn công phát tán hàng loạt gói tin DENM giả thông báo có tai nạn hư cấu để lừa hệ thống điều hướng toàn bộ dòng xe sang một tuyến đường khác, phục vụ mục đích phá hoại hoặc tạo điều kiện cho các vụ cướp tiêu cực.
+    \item \textbf{Tấn công Giả mạo Tai nạn (False Incident Injection):} Kẻ tấn công phát tán hàng loạt gói tin DENM giả thông báo có tai nạn hư cấu để lừa hệ thống điều hướng toàn bộ dòng xe sang một tuyến đường khác, phục vụ mục đích phá hoại hoặc tạo điều kiện cho các hoạt động tội phạm.
     \item \textbf{Giải pháp Kiến trúc SCMS:} Toàn bộ hệ thống V2X bắt buộc phải vận hành trên nền tảng Quản lý Chứng thực An ninh (Security Credential Management System - SCMS). Mỗi thông điệp phải được ký số mật mã bất đối xứng ECDSA. Đồng thời, việc sử dụng các chứng chỉ giả danh (Pseudonym Certificates) luân phiên giúp ngăn chặn việc theo dõi hành trình riêng tư của chủ phương tiện.
 \end{itemize}
 
-\subsection{Lộ trình Đề xuất Triển khai Hệ thống V2X Nhận thức Tai nạn tại Việt Nam}
+\subsection{Lộ trình Đề xuất Triển khai Hệ thống V2X Thích ứng Tai nạn tại Việt Nam}
 Từ các kết quả nghiên cứu học thuật của Zohir et al., chúng tôi đề xuất lộ trình 3 giai đoạn áp dụng thực tế vào hạ tầng giao thông Việt Nam:
 \begin{enumerate}
     \item \textbf{Giai đoạn 1 (2026 - 2028) - Thí điểm Hành lang Cao tốc Thông minh:}
@@ -451,22 +533,42 @@ Từ các kết quả nghiên cứu học thuật của Zohir et al., chúng tô
     Ban hành quy chuẩn quốc gia yêu cầu tích hợp thiết bị OBU V2X trên toàn bộ xe tải hạng nặng, xe container liên tỉnh và các dòng ô tô thương mại xuất xưởng mới, tiến tới xây dựng mạng lưới giao thông thông minh an toàn, không còn tai nạn dồn toa thảm khốc.
 \end{enumerate}
 
+\subsection{Phân tích Kinh tế - Kỹ thuật và Suất Đầu tư Hạ tầng V2X tại Việt Nam}
+Triển khai hệ thống giao thông thích ứng tai nạn không chỉ là bài toán kỹ thuật thuần túy mà còn đòi hỏi sự cân đối kỹ lưỡng về mặt kinh tế giữa chi phí đầu tư (CAPEX), chi phí vận hành (OPEX) và giá trị lợi ích kinh tế - xã hội mang lại:
+\begin{itemize}
+    \item \textbf{Dự toán Suất Đầu tư Hạ tầng Ven đường (CAPEX):}
+    Đối với các tuyến cao tốc huyết mạch tại Việt Nam (như tuyến cao tốc Bắc - Nam đoạn Phan Thiết - Dầu Giây hoặc TP.HCM - Long Thành), việc bố trí trạm RSU với mật độ trung bình $1\text{ km/trạm}$ đòi hỏi chi phí thiết bị khoảng $180 - 250$ triệu VNĐ cho một trạm RSU chuẩn C-V2X công nghiệp (bao gồm cụm ăng-ten mảng pha, bộ xử lý biên MEC, camera AI giám sát sự cố và kết nối cáp quang bảo mật). Với tuyến cao tốc dài $100\text{ km}$, tổng chi phí đầu tư thiết bị ven đường ước tính dao động từ $20$ đến $28$ tỷ VNĐ — một con số hoàn toàn khả thi và chỉ chiếm chưa đầy $0.2\%$ tổng mức đầu tư xây dựng hạ tầng cao tốc.
+    \item \textbf{Lợi ích Kinh tế - Xã hội và Thu hồi Vốn Đầu tư:}
+    Lợi ích thu được từ hệ thống AATM là vô cùng to lớn:
+    \begin{enumerate}
+        \item \textit{Cắt giảm thiệt hại về người và tài sản:} Theo ước tính của Ủy ban An toàn Giao thông Quốc gia, mỗi vụ tai nạn liên hoàn trên cao tốc gây thiệt hại trung bình từ $3$ đến $10$ tỷ VNĐ (bao gồm chi phí hư hỏng phương tiện, viện phí y tế và đền bù bảo hiểm). Việc ngăn chặn thành công các vụ đâm dồn toa thứ cấp giúp tiết kiệm hàng trăm tỷ đồng mỗi năm cho xã hội.
+        \item \textit{Tiết kiệm thời gian và nhiên liệu:} Thuật toán tái định tuyến chủ động dập tắt các điểm nghẽn ùn tắc kéo dài, giúp giảm trung bình $18 - 25\%$ thời gian di chuyển trong các khung giờ cao điểm và tiết kiệm hàng triệu lít nhiên liệu tiêu thụ lãng phí do dừng - đi liên tục.
+        \item \textit{Bảo vệ môi trường:} Giảm phát thải khí nhà kính ($CO_2$) và các chất gây ô nhiễm không khí ($NO_x$, bụi mịn PM2.5) từ $12\%$ đến $15\%$, đóng góp thiết thực vào mục tiêu Net-Zero của Việt Nam vào năm 2050.
+    \end{enumerate}
+    \item \textbf{Khung Thử nghiệm Pháp lý (Regulatory Sandbox) và Mô hình Hợp tác Công - Tư (PPP):}
+    Để thúc đẩy tốc độ xã hội hóa hạ tầng V2X, Chính phủ cần sớm ban hành cơ chế "Sandbox" cho phép thí điểm thu phí dịch vụ giá trị gia tăng V2X (như dịch vụ cảnh báo an toàn cao cấp, hỗ trợ tự lái cho xe logistics) theo hình thức đối tác công - tư (PPP). Doanh nghiệp viễn thông đầu tư hạ tầng mạng và thu hồi vốn thông qua gói cước dịch vụ viễn thông ITS, giảm bớt gánh nặng cho ngân sách nhà nước.
+    \item \textbf{Tiêu chuẩn Hóa và Thách thức Tương thích Đa Thương hiệu (OEM Interoperability):}
+    Một rào cản kỹ thuật lớn tại thị trường Việt Nam là sự phân mảnh giữa các nhà sản xuất ô tô (VinFast, Hyundai, Toyota, Thaco, Ford) và các nhà cung cấp thiết bị viễn thông OBU/RSU. Để hệ thống thích ứng tai nạn vận hành tin cậy, các phương tiện khác thương hiệu bắt buộc phải hiểu chung cú pháp thông điệp và giao thức mã hóa an toàn theo chuẩn IEEE 1609.2 và ETSI ITS-G5/3GPP. Cần sớm thành lập Trung tâm Đo kiểm và Chứng nhận Hợp chuẩn V2X Quốc gia (Plugtest Center) để thử nghiệm khả năng liên thông đa thiết bị trước khi cấp phép lưu hành thương mại.
+    \item \textbf{Đánh giá Tác động Môi trường và Cơ chế Tín chỉ Carbon Giao thông (ESG \& Carbon Credits):}
+    Việc các thuật toán định tuyến chủ động giải tỏa xung đột và triệt tiêu các đợt dừng - đi giật cục (Stop-and-Go shockwaves) giúp giảm trực tiếp thời gian động cơ nổ máy chờ (idle running). Lượng phát thải $CO_2$ và $NO_x$ cắt giảm được có thể lượng hóa chuẩn xác thông qua dữ liệu giám sát V2I của RSU để đăng ký Tín chỉ Carbon Giao thông Thông minh trên sàn giao dịch tín chỉ carbon quốc gia, tạo nguồn tài chính xanh bền vững tái đầu tư cho công tác bảo trì hạ tầng ITS.
+\end{itemize}
+
 \clearpage
 
 % ==================== CHƯƠNG 6 ====================
 \section{Kết luận, Phương hướng Phát triển và Kiến nghị}
 
 \subsection{Kết luận}
-Báo cáo tiểu luận đã hoàn thành việc nghiên cứu chuyên sâu và hệ thống hóa toàn diện công trình khoa học tiên phong của Hossam M. Zohir và cộng sự công bố trên tạp chí \textit{Scientific Reports} (Nature Portfolio, 2025/2026) về chủ đề \textbf{Quản lý Giao thông Nhận thức Tai nạn và Tối ưu hóa Định tuyến dựa trên V2X}. Những đúc kết quan trọng nhất bao gồm:
+Báo cáo tiểu luận đã hoàn thành việc nghiên cứu chuyên sâu và hệ thống hóa toàn diện công trình khoa học tiên phong của Hossam M. Zohir và cộng sự công bố trên tạp chí \textit{Scientific Reports} (Nature Portfolio, 2025/2026) về chủ đề \textbf{Quản lý Giao thông Thích ứng Tai nạn và Tối ưu hóa Định tuyến dựa trên V2X}. Những đúc kết quan trọng nhất bao gồm:
 \begin{enumerate}
-    \item \textbf{Vai trò cốt tử của Mạng V2X:} V2X chính là "hệ thần kinh trung ương" của ITS hiện đại. Bằng việc kết nối trực tiếp V2V và V2I với độ trễ dưới 3 ms của 5G NR Sidelink, V2X giúp vượt qua hoàn toàn rào cản tầm nhìn thẳng (LOS) của các cảm biến quang học, mang lại khả năng nhận thức tai nạn sớm từ cự ly hàng ngàn mét.
+    \item \textbf{Vai trò cốt tử của Mạng V2X:} V2X chính là "hệ thần kinh trung ương" của ITS hiện đại. Bằng việc kết nối trực tiếp V2V và V2I với độ trễ dưới 3 ms của 5G NR Sidelink, V2X giúp vượt qua hoàn toàn rào cản tầm nhìn thẳng (LOS) của các cảm biến quang học, mang lại khả năng thích ứng tai nạn sớm từ cự ly hàng ngàn mét.
     \item \textbf{Sự vượt trội của AI trong phát hiện tai nạn:} Việc kết hợp các mô hình học chuyển giao (đặc biệt là MobileNet với độ chính xác 98.17\%) cùng phương pháp giải thích giá trị Shapley cho phép nhận dạng và phân loại mức độ nghiêm trọng của va chạm tức thời, tạo dữ liệu đầu vào chuẩn xác cho hệ thống điều hành.
     \item \textbf{Bức tranh toàn cảnh về các giải thuật định tuyến:} Công trình đã chứng minh rằng không có một thuật toán đơn lẻ nào tối ưu cho mọi tình huống. Trong khi các biến thể $A^*$ ($A^*$, Directional Search $A^*$, ST-GCN $A^*$) là lựa chọn số một cho việc tái định tuyến cục bộ tức thời với thời gian tính toán ngắn nhất, thì các thuật toán Metaheuristics (GA, ACO, Tabu Search) và Học tăng cường sâu (DRL/MARL) lại chiếm ưu thế tuyệt đối trong việc cân bằng tải toàn cục, triệt tiêu hiện tượng ùn tắc dây chuyền khi điều phối hàng chục ngàn xe.
     \item \textbf{Tính thực tiễn cao:} Việc tích hợp các giải pháp phòng ngừa dồn toa cao tốc (EEBL, CACC Platooning) và tự hành đỗ xe AVP theo tiêu chuẩn ISO 23374 đã làm hoàn thiện chu trình an toàn của phương tiện từ đường cao tốc tốc độ cao đến các điểm đỗ xe đô thị.
 \end{enumerate}
 
 \subsection{Phương hướng Phát triển: Mở rộng sang An toàn Cao tốc, Đoàn xe và Đỗ xe Tự hành}
-Để hoàn thiện hệ sinh thái giao thông thông minh nhận thức tai nạn, hướng phát triển tương lai cần mở rộng tích hợp bài toán định tuyến luồng xe vĩ mô của Zohir et al. với các bài toán điều khiển an toàn vi mô theo chu trình khép kín \cite{other_references}:
+Để hoàn thiện hệ sinh thái giao thông thông minh thích ứng tai nạn, hướng phát triển tương lai cần mở rộng tích hợp bài toán định tuyến luồng xe vĩ mô của Zohir et al. với các bài toán điều khiển an toàn vi mô theo chu trình khép kín \cite{other_references}:
 
 \subsubsection{Xử lý Khẩn cấp Chống Tai nạn Dồn toa trên Cao tốc (Chain-Reaction Mitigation)}
 Định tuyến tránh tai nạn chỉ thực sự phát huy hiệu quả khi phương tiện không bị đâm dồn toa ngay tại thời điểm sự cố bùng phát.
@@ -483,7 +585,7 @@ Nghiên cứu của Shladover et al. (PATH Project) \cite{other_references} về
     \begin{equation}
         \left| \frac{A_i(j\omega)}{A_{i-1}(j\omega)} \right| \le 1, \quad \forall \omega > 0
     \end{equation}
-    đảm bảo dao động phanh không bao giờ bị khuếch đại ngược về các xe phía sau, ngăn chặn tai nạn đè dồn toa giữa các xe tải siêu trường siêu trọng.
+    đảm bảo dao động phanh không bao giờ bị khuếch đại ngược về các xe phía sau, ngăn chặn tai nạn đâm dồn toa giữa các xe tải siêu trường siêu trọng.
 \end{itemize}
 
 \subsubsection{Quản lý Nút giao Tự động (Autonomous Intersection Management - AIM)}
@@ -494,7 +596,7 @@ Các xe tự động thương lượng quyền ưu tiên qua liên kết V2I v�
 Một mắt xích quan trọng kết nối hành trình của xe là giải quyết bài toán giao thông tĩnh tại các bãi đỗ xe:
 \begin{itemize}
     \item Tiêu chuẩn quốc tế \textbf{ISO 23374} định nghĩa kiến trúc AVP Type 2 (Hạ tầng dẫn dắt - Infrastructure-Centric) \cite{other_references}. Toàn bộ việc giám sát chướng ngại vật và lập kế hoạch đường đi trong hầm đỗ xe do máy chủ biên MEC thực hiện thông qua mạng lưới Camera/LiDAR trên trần bãi đỗ.
-    \item \textbf{Định vị chính xác trong hầm kín mất GPS:} Sử dụng công nghệ Băng siêu rộng (UWB) đo khoảng cách hai chiều (Two-Way Ranging - TWR) kết hợp bộ lọc Kalman mở rộng (EKF) và Visual SLAM, đạt độ chính xác dưới $\pm 5$ cm, cho phép xe tự động lùi chuồng an toàn và giải tỏa 30\% diện tích đỗ xe đô thị.
+    \item \textbf{Định vị chính xác trong hầm kín mất GPS:} Sử dụng công nghệ Băng siêu rộng (UWB) đo khoảng cách hai chiều (Two-Way Ranging - TWR) kết hợp bộ lọc Kalman mở rộng (EKF) và Visual SLAM, đạt độ chính xác dưới $\pm 5$ cm, cho phép xe lùi vào vị trí đỗ an toàn và giải tỏa 30\% diện tích đỗ xe đô thị.
 \end{itemize}
 
 \subsection{Kiến nghị}
@@ -502,7 +604,9 @@ Nhằm hiện thực hóa các tiến bộ công nghệ này vào thực tiễn 
 \begin{itemize}
     \item \textbf{Về mặt chính sách quy hoạch:} Bộ Thông tin và Truyền thông phối hợp chặt chẽ với Bộ Giao thông Vận tải sớm công bố quy hoạch phân bổ dải tần số chuyên dụng $5.850 - 5.925$ GHz cho công nghệ C-V2X tại Việt Nam theo chuẩn 3GPP.
     \item \textbf{Về mặt nghiên cứu và đào tạo đại học:} Khuyến khích các trường đại học khối kỹ thuật và giao thông vận tải, đặc biệt là Trường Đại học Giao thông Vận tải TP. Hồ Chí Minh (UTH), đẩy mạnh các chương trình nghiên cứu kết hợp giữa Khoa học Máy tính và Kỹ thuật Giao thông; xây dựng các phòng thí nghiệm mô phỏng tích hợp phần mềm SUMO/Veins kết hợp bộ kit phần cứng V2X thực tế để sinh viên và học viên cao học làm chủ các giải thuật định tuyến động và công nghệ xe tự hành.
-    \item \textbf{Về mặt liên kết công nghiệp:} Thúc đẩy hợp tác giữa các doanh nghiệp sản xuất ô tô trong nước (như VinFast) với các tập đoàn viễn thông (Viettel, VNPT) để thử nghiệm lắp đặt thiết bị OBU/RSU và tích hợp các thuật toán nhận thức tai nạn vào các dòng xe điện thông minh lưu thông trên các tuyến cao tốc hiện đại của đất nước.
+    \item \textbf{Về mặt liên kết công nghiệp:} Thúc đẩy hợp tác giữa các doanh nghiệp sản xuất ô tô trong nước (như VinFast) với các tập đoàn viễn thông (Viettel, VNPT) để thử nghiệm lắp đặt thiết bị OBU/RSU và tích hợp các thuật toán thích ứng tai nạn vào các dòng xe điện thông minh lưu thông trên các tuyến cao tốc hiện đại của đất nước.
+    \item \textbf{Về mặt tiêu chuẩn kỹ thuật và an ninh số quốc gia:} Bộ Khoa học và Công nghệ phối hợp với Cục Đăng kiểm Việt Nam sớm ban hành bộ Quy chuẩn Kỹ thuật Quốc gia (QCVN) bắt buộc đối với thiết bị thu phát sóng V2X OBU/RSU thương mại. Đồng thời, giao Ban Cơ yếu Chính phủ và Trung tâm Giám sát An toàn Không gian Mạng Quốc gia (NCSC) quản lý Cơ quan Cấp phát Chứng thư Gốc (Root CA) trong kiến trúc an ninh SCMS quốc gia, ngăn chặn triệt để nguy cơ tin tặc giả mạo bản tin tai nạn hòng làm tê liệt mạng lưới giao thông đường bộ.
+    \item \textbf{Về mặt xây dựng nền tảng dữ liệu mở (Open Mobility Data):} Thiết lập nền tảng Bản đồ số Giao thông Thống nhất Quốc gia kết nối dữ liệu thời gian thực từ các trạm thu phí không dừng ETC, camera AI giám sát cao tốc và các trung tâm điều hành ITS đô thị. Cần ban hành cơ chế chia sẻ dữ liệu mở có kiểm soát cho các trường đại học, viện nghiên cứu và doanh nghiệp công nghệ trong nước nhằm liên tục thử nghiệm, huấn luyện các mô hình AI và tối ưu hóa giải thuật định tuyến phù hợp với đặc thù giao thông hỗn hợp tại Việt Nam.
 \end{itemize}
 
 \clearpage
