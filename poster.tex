@@ -1,0 +1,122 @@
+\documentclass[25pt, a0paper, portrait]{tikzposter}
+\geometry{paperwidth=60cm,paperheight=120cm, left=3cm, right=3cm, top=3cm, bottom=3cm}
+
+\usepackage[T5]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\title{TIẾN BỘ TRONG QUẢN LÝ GIAO THÔNG THÍCH ỨNG TAI NẠN: TỐI ƯU HÓA ĐỊNH TUYẾN DỰA TRÊN V2X}
+\author{\textbf{Sinh viên:} Đỗ Hữu Khang (MSSV: 2580101060) \quad | \quad \textbf{GVHD:} Lê Văn Quốc Anh}
+\institute{TRƯỜNG ĐẠI HỌC GIAO THÔNG VẬN TẢI TP. HỒ CHÍ MINH \\ Khoa Khoa học Máy tính}
+
+\usetheme{Desert} % Một theme của tikzposter
+\colorlet{backgroundcolor}{white}
+
+\begin{document}
+
+\maketitle
+
+\begin{columns}
+
+% CỘT TRÁI
+\column{0.5}
+
+\block{\textbf{1. Bối cảnh \& Hạn chế của Con người}}{
+    \Large 
+    Hệ thống giao thông đối mặt với nạn ùn tắc và đâm dồn toa liên hoàn. Phương pháp điều phối truyền thống (đèn cố định, biển VMS) có độ trễ lớn và phản ứng quá chậm chạp.
+    
+    \vspace{1cm}
+    \textbf{Giới hạn phản xạ (PRT) sinh lý não bộ:}
+    \begin{itemize}[leftmargin=*, label=$\bullet$]
+        \item Mất $1.2 - 1.5$s để nhận thức \& đạp phanh.
+        \item Ở tốc độ $120$ km/h, bám đuôi $15$m có \textbf{Thời gian tới va chạm (TTC) chỉ 0.45s}.
+        \item $\rightarrow$ \textit{Mắt người chưa kịp nhìn thì tai nạn đã xảy ra!}
+    \end{itemize}
+    \vspace{0.5cm}
+    \textbf{Giải pháp:} Cần mạng vô tuyến thời gian thực (V2X) có độ trễ siêu thấp để thay con người tự động kích hoạt hệ thống phản xạ khẩn cấp.
+}
+
+\block{\textbf{3. Chiến lược Định tuyến Thích ứng Tai nạn}}{
+    \Large
+    \textbf{Phát hiện \& Đánh giá bằng AI (Deep Learning):}
+    \begin{itemize}[leftmargin=*, label=$\bullet$]
+        \item Cảm biến OBU + Camera RSU kết hợp mô hình học chuyển giao \textbf{MobileNet} đạt độ chính xác \textbf{98.17\%} phân loại mức độ nghiêm trọng.
+        \item Sử dụng \textbf{SHAP values} giải thích tác động của vận tốc, gia tốc, thời tiết để AI không còn là "hộp đen".
+    \end{itemize}
+
+    \vspace{1cm}
+    \textbf{Tái định tuyến theo 3 vùng nguy cơ:}
+    \begin{enumerate}
+        \item \textbf{Vùng Trực tiếp (<200m):} Kích hoạt Phanh tự động (AEB) \& Hỗ trợ chuyển làn tự động (tự né) để ngăn đâm dồn toa.
+        \item \textbf{Vùng Tái định tuyến (200m - 2km):} Điều hướng xe rẽ lối thoát (Off-ramps), tránh tạo thành điểm ùn tắc mới.
+        \item \textbf{Hành lang Xanh:} Yêu cầu xe thường dạt sang hai bên, tạo luồng ưu tiên tuyệt đối cho xe cứu thương.
+    \end{enumerate}
+}
+
+% CỘT PHẢI
+\column{0.5}
+
+\block{\textbf{2. Giải pháp: Mạng V2X \& Thông điệp Khẩn cấp}}{
+    \Large
+    \textbf{Hệ sinh thái tương tác V2X đa chiều:}
+    \begin{itemize}[leftmargin=*, label=$\bullet$]
+        \item \textbf{V2V:} Xe giao tiếp trực tiếp với xe (Ngăn đâm dồn toa).
+        \item \textbf{V2I:} Xe giao tiếp với hạ tầng RSU (Điều hướng vĩ mô).
+        \item \textbf{V2N \& V2P:} Đám mây và người đi bộ.
+    \end{itemize}
+    \vspace{1cm}
+    \textbf{Đột phá công nghệ 5G NR Sidelink (C-V2X):}
+    \begin{itemize}[leftmargin=*, label=$\bullet$]
+        \item Độ trễ siêu thấp (\textbf{< 3ms}) vượt mặt DSRC cũ.
+        \item Hoạt động tốt dù mật độ tắc đường cao nhờ thuật toán \textbf{DCC} (Kiểm soát nghẽn phi tập trung).
+    \end{itemize}
+    \vspace{1cm}
+    \textbf{Cấu trúc thông điệp ETSI:}
+    \begin{itemize}[leftmargin=*, label=$\bullet$]
+        \item \textbf{CAM (Định kỳ 10Hz):} Liên tục gửi vị trí, vận tốc (Nhịp tim).
+        \item \textbf{DENM (Khẩn cấp):} Phát tán đa chặng (Multi-hop Geocast) ngay lập tức khi túi khí bung, báo hiệu tâm điểm tai nạn.
+    \end{itemize}
+}
+
+\block{\textbf{4. Các Giải thuật Tối ưu hóa: Trí não Điều phối}}{
+    \Large
+    Sự đánh đổi căn bản: \textit{Độ trễ tính toán vs. Tính tối ưu toàn cục}.
+    
+    \vspace{1cm}
+    \textbf{A. Nhóm Giải thuật Đồ thị Cải tiến (A* Variants):}
+    \begin{itemize}[leftmargin=*, label=$\bullet$]
+        \item \textit{AOA*, Directional Search A*, ST-GCN A*}.
+        \item \textbf{Đặc điểm:} Tính toán cực nhanh (mili-giây).
+        \item \textbf{Ứng dụng:} Thích hợp nhất cho OBU trên xe để tự ra quyết định né tránh tai nạn tức thời.
+    \end{itemize}
+    \vspace{0.5cm}
+    \textbf{B. Nhóm Phỏng sinh học (Metaheuristics):}
+    \begin{itemize}[leftmargin=*, label=$\bullet$]
+        \item \textit{Tối ưu hóa Bầy chim sẻ (SFSSA), Tabu Search, Di truyền (AGA).}
+        \item \textbf{Đặc điểm:} Lời giải tối ưu rất tốt, tránh kẹt xe diện rộng nhưng tốn nhiều thời gian chạy. Phù hợp điều phối đội xe logistics.
+    \end{itemize}
+    \vspace{0.5cm}
+    \textbf{C. Học Tăng cường Sâu (Multi-Agent DRL):}
+    \begin{itemize}[leftmargin=*, label=$\bullet$]
+        \item Mỗi phương tiện/nút giao là một tác tử (Agent) tự học chính sách điều hướng qua hệ thống phần thưởng.
+    \end{itemize}
+}
+
+\end{columns}
+
+\block{\textbf{5. Khả năng Mở rộng, Bảo mật \& Kết luận}}{
+    \Large
+    \begin{itemize}[leftmargin=*, label=$\bullet$]
+        \item \textbf{An toàn Đoàn xe (CACC Platooning):} Duy trì khoảng cách thời gian siêu hẹp (0.6s). Khi xe đầu phanh khẩn cấp, thuật toán ổn định chuỗi triệt tiêu xung hãm phanh, tránh đâm dồn toa ở xe tải siêu trường.
+        \item \textbf{Đỗ xe tự hành chuẩn ISO 23374 (AVP):} Định vị UWB siêu chính xác ($\pm$ 5cm) giúp xe tự lùi vào bãi trong khu vực mất GPS.
+        \item \textbf{Bảo mật V2X (SCMS):} Chứng chỉ số ECDSA và mã giả danh luân phiên ngăn chặn tin tặc phát tán báo động tai nạn giả (False Incident Injection).
+    \end{itemize}
+    \vspace{1cm}
+    \textbf{KẾT LUẬN:} Công nghệ V2X kết hợp thuật toán tái định tuyến AI biến hệ thống giao thông từ "chữa cháy thụ động" sang "phòng vệ chủ động", bảo vệ sinh mạng và tài sản ở cấp độ hoàn toàn mới.
+}
+
+\end{document}
